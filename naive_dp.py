@@ -4,7 +4,15 @@ from bound_estimate import BoundEstimate
 
 
 class NaiveDPSolver(KnapsackSolver):
-    def __init__(self, items, capacity, item_count, ks_index, order=None, debug=False):
+    def __init__(
+        self, 
+        items,
+        capacity,
+        item_count,
+        ks_index,
+        order,
+        debug
+    ):
         super().__init__(items, capacity, item_count, ks_index, order, debug)
 
 

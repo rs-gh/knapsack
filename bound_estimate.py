@@ -1,5 +1,4 @@
-from .utils import debug_print
-from .bound_estimate import BoundEstimate
+from utils import debug_print
 
 
 class BoundEstimate:

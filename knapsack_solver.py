@@ -3,18 +3,27 @@ from utils import debug_print
 
 
 class KnapsackSolver(ABC):
-    def __init__(self, items, capacity, item_count, ks_index, order, debug, epsilon=0):
+    def __init__(
+        self,
+        items,
+        capacity,
+        item_count,
+        ks_index,
+        order,
+        debug
+    ):
         if order == "descending_value_density":
-            self.items = Solver.value_density_order(items, desc=True)
+            self.items = KnapsackSolver.value_density_order(items, desc=True)
         elif order == "ascending_value_density":
-            self.items = Solver.value_density_order(items)
+            self.items = KnapsackSolver.value_density_order(items)
         elif order == "descending_weight":
-            self.items = Solver.weight_order(items, desc=True)
+            self.items = KnapsackSolver.weight_order(items, desc=True)
         elif order == "ascending_weight":
-            self.items = Solver.weight_order(items)
+            self.items = KnapsackSolver.weight_order(items)
         else:
             self.items = items
         debug_print("ordered items: {}".format(self.items), debug=debug)
+        
         self.capacity = capacity
         self.item_count = item_count
         self.ks_index = ks_index
@@ -22,7 +31,6 @@ class KnapsackSolver(ABC):
         self.debug = debug
         self.picked_items = []
         self.picked_items_assignment = [0] * self.item_count
-        self.epsilon = 0
         self.cache = {}
 
 
