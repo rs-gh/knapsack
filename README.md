@@ -1,2 +1,2 @@
 # knapsack
-A branch-and-bound knapsack solver that implements different tree exploration methods and estimation heuristics. Inspired by (and using test data from) the [Coursera Discrete Optimization course](https://www.coursera.org/learn/discrete-optimization).
+A branch-and-bound knapsack solver that implements different tree exploration methods and estimation heuristics, along with a simple logging system to collect metrics on the performance of different methods on problems. The notebook contains some examples that use this system. Inspired by (and using test data from) the [Coursera Discrete Optimization course](https://www.coursera.org/learn/discrete-optimization). 
